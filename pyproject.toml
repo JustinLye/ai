@@ -8,10 +8,9 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "torch (>=2.7.1,<3.0.0)",
-    "torchvision (>=0.22.1,<0.23.0)",
-    "pytorch-triton-rocm (>=3.3.1,<4.0.0)",
-    "gymnasium[accept-rom-license,atari,box2d] (>=1.1.1,<2.0.0)"
+    "gymnasium[accept-rom-license,atari,box2d] (>=1.1.1,<2.0.0)",
+    "torch (>=2.7.0,<3.0.0)",
+    "torchvision (>=0.22.0,<0.23.0)"
 ]
 
 [tool.poetry]
@@ -25,9 +24,10 @@ priority = "explicit"
 
 
 [tool.poetry.dependencies]
-torch = {source = "pytorch-gpu"}
-torchvision = {source = "pytorch-gpu"}
-pytorch-triton-rocm = {source = "pytorch-gpu"}
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.4.0"
+
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"

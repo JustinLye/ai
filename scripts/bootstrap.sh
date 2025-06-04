@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo apt install \
+sudo apt install -y \
   pipx \
   swig
 
